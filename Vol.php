@@ -17,8 +17,7 @@ class Vol
         }
     }
 
-    public function ajout($date_depart,$heure_depart,$heure_arrivee,$ref_pilote,$ref_avion)
-    {
+    public function insertVol($date_depart,$heure_depart,$heure_arrivee,$ref_pilote,$ref_avion){
         $req = $this->connexion->prepare("INSERT INTO vol(date_depart, heure_depart, heure_arrivee ,ref_pilote, ref_avion) 
         VALUES (:date_depart, :heure_depart, :heure_arrivee, :ref_pilote, :ref_avion)");
         $req->execute(array(
