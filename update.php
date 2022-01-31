@@ -10,26 +10,18 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
     <script type="text/javascript" src="http: //cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"></link>
     <script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <script type="text/javascript">
         $(document).ready( function () {
             $('#myTable').DataTable()
         } );
-        $(document).ready(function() {
-            $('#ref_pilote').select2();
-        });
-        $(document).ready(function() {
-            $('#ref_avion').select2();
-        });
     </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>Booking Form HTML Template</title>
@@ -52,13 +44,59 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
 
 </head>
 <body>
-<form method="post" action="src/traitement/traitement_insert.php">
+<form method="post" action="src/traitement/traitement_update.php">
     <div id="booking" class="section">
         <div class="section-center">
             <div class="container">
                 <div class="row">
+                    <br></br>
+                    <h1 align="center" style="text-emphasis-color: #204d74" >UPDATE VOLS</h1>
                     <div class="booking-form">
                         <form>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                <select class="form-control" name="id_vol" id="id_vol">
+                                    <option></option>
+                                    <?php
+                                    $req = $bdd->query('SELECT * FROM vol');
+                                    while($res=$req->fetch()){
+                                        ?>
+                                        <option value="<?php echo $res['id_vol'];?>"><?php echo $res['id_vol'];?></option>
+                                    <?php } ?>
+                                </select>
+                                <span class="select-arrow"></span>
+                                <span class="form-label">CHOISIR UN VOL</span>
+                                    </div>
+                            </div>
+                            <div class="col-md-10">
+                                <table id="myTable">
+                                    <thead>
+                                    <tr>
+                                        <th>ID Vol</th>
+                                        <th>Date de Depart</th>
+                                        <th>Heure de depart</th>
+                                        <th>Heure d'arrivée</th>
+                                        <th>ID Pilote</th>
+                                        <th>ID Avion</th>
+                                    </tr>
+                                    <tbody>
+                                    <?php
+                                    $req = $bdd->query('SELECT * FROM vol');
+                                    while($res=$req->fetch()){
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $res['id_vol'];?></td>
+                                            <td><?php echo $res['date_depart'];?></td>
+                                            <td><?php echo $res['heure_depart'];?></td>
+                                            <td><?php echo $res['heure_arrivee'];?></td>
+                                            <td><?php echo $res['ref_pilote'];?></td>
+                                            <td><?php echo $res['ref_avion'];?></td>
+                                        </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                    </thead>
+                                </table>
+                            </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <input class="form-control" type="date" name="date_depart" id="date" value="Date de depart">
@@ -77,7 +115,6 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                     <span class="select-arrow"></span>
                                     <span class="form-label">ID Pilote</span>
                                 </div>
-
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -104,38 +141,8 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                     <span class="form-label">Heure d'arrivé</span>
                                 </div>
                                 <div class="form-btn">
-                                    <button class="submit-btn">Enregistrer</button>
+                                    <button class="submit-btn">Update</button>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                            <table id="myTable">
-                                <thead>
-                                <tr>
-                                    <th>ID Vol</th>
-                                    <th>Date de Depart</th>
-                                    <th>Heure de depart</th>
-                                    <th>Heure d'arrivée</th>
-                                    <th>ID Pilote</th>
-                                    <th>ID Avion</th>
-                                </tr>
-                                <tbody>
-                                <?php
-                                $req = $bdd->query('SELECT * FROM vol');
-                                while($res=$req->fetch()){
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $res['id_vol'];?></td>
-                                        <td><?php echo $res['date_depart'];?></td>
-                                        <td><?php echo $res['heure_depart'];?></td>
-                                        <td><?php echo $res['heure_arrivee'];?></td>
-                                        <td><?php echo $res['ref_pilote'];?></td>
-                                        <td><?php echo $res['ref_avion'];?></td>
-                                    </tr>
-                                <?php } ?>
-                                </tbody>
-                                </thead>
-                            </table>
-                            </div>
                         </form>
                     </div>
                 </div>
