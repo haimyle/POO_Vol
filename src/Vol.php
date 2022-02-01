@@ -3,30 +3,121 @@
 
 class Vol
 {
-    private $connexion;
-    private $arrivalDate;
-    private $arrivalHour;
-    private $departHour;
+    private $date_depart;
+    private $heure_arrivee;
+    private $heure_depart;
+    private $ref_pilote;
+    private $ref_avion;
+    private $id;
 
-    public function __construct()
+    /**
+     * Vol constructor.
+     * @param $date_depart
+     * @param $heure_arrivee
+     * @param $heure_depart
+     * @param $ref_pilote
+     * @param $ref_avion
+     */
+    public function __construct($date_depart, $heure_arrivee, $heure_depart, $ref_pilote, $ref_avion)
     {
-        try {
-            $this->connexion = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8', 'root', '');
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+        $this->getDateDepart()($date_depart);
+        $this->getHeureArrivee($heure_arrivee);
+        $this->getHeureDepart($heure_depart) ;
+        $this->getRefPilote($ref_pilote);
+        $this->getRefAvion($ref_avion);
     }
 
-    public function insertVol($date_depart, $heure_depart, $heure_arrivee, $ref_pilote, $ref_avion)
+
+    /**
+     * @return mixed
+     */
+    public function getDateDepart()
     {
-        $req = $this->connexion->prepare("INSERT INTO vol(date_depart, heure_depart, heure_arrivee ,ref_pilote, ref_avion) 
+        return $this->date_depart;
+    }
+
+    /**
+     * @param mixed $date_depart
+     */
+    public function setDateDepart($date_depart)
+    {
+        $this->date_depart = $date_depart;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeureArrivee()
+    {
+        return $this->heure_arrivee;
+    }
+
+    /**
+     * @param mixed $heure_arrivee
+     */
+    public function setHeureArrivee($heure_arrivee)
+    {
+        $this->heure_arrivee = $heure_arrivee;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeureDepart()
+    {
+        return $this->heure_depart;
+    }
+
+    /**
+     * @param mixed $heure_depart
+     */
+    public function setHeureDepart($heure_depart)
+    {
+        $this->heure_depart = $heure_depart;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRefPilote()
+    {
+        return $this->ref_pilote;
+    }
+
+    /**
+     * @param mixed $ref_pilote
+     */
+    public function setRefPilote($ref_pilote)
+    {
+        $this->ref_pilote = $ref_pilote;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRefAvion()
+    {
+        return $this->ref_avion;
+    }
+
+    /**
+     * @param mixed $ref_avion
+     */
+    public function setRefAvion($ref_avion)
+    {
+        $this->ref_avion = $ref_avion;
+    }
+
+    public function insertVol($bdd)
+    {
+        $req = $bdd->prepare("INSERT INTO vol(date_depart, heure_depart, heure_arrivee ,ref_pilote, ref_avion) 
         VALUES (:date_depart, :heure_depart, :heure_arrivee, :ref_pilote, :ref_avion)");
         $res = $req->execute(array(
-            ':date_depart' => $date_depart,
-            ':heure_depart' => $heure_depart,
-            ':heure_arrivee' => $heure_arrivee,
-            ':ref_pilote' => $ref_pilote,
-            ':ref_avion' => $ref_avion
+            ':date_depart' => $this->date_depart,
+            ':heure_depart' => $this->heure_depart,
+            ':heure_arrivee' => $this->heure_arrivee,
+            ':ref_pilote' => $this->ref_pilote,
+            ':ref_avion' => $this->ref_avion
         ));
         if ($res){
             echo '<script>alert("Le vol est enregistré")</script>';
@@ -37,16 +128,16 @@ class Vol
 
     }
 
-    public function updateVol($date_depart, $heure_depart, $heure_arrivee, $ref_pilote, $ref_avion, $id_vol)
+    public function updateVol($bdd)
     {
-        $req = $this->connexion->prepare("UPDATE vol SET date_depart =:date_depart, heure_depart =:heure_depart, heure_arrivee =:heure_arrivee, ref_pilote =:ref_pilote, ref_avion=:ref_avion WHERE id_vol=:id_vol");
+        $req = $bdd->prepare("UPDATE vol SET date_depart =:date_depart, heure_depart =:heure_depart, heure_arrivee =:heure_arrivee, ref_pilote =:ref_pilote, ref_avion=:ref_avion WHERE id_vol=:id_vol");
         $res = $req->execute(array(
-            ':date_depart' => $date_depart,
-            ':heure_depart' => $heure_depart,
-            ':heure_arrivee' => $heure_arrivee,
-            ':ref_pilote' => $ref_pilote,
-            ':ref_avion' => $ref_avion,
-            ':id_vol' => $id_vol
+            ':date_depart' => $this->date_depart,
+            ':heure_depart' => $this->heure_depart,
+            ':heure_arrivee' => $this->heure_arrivee,
+            ':ref_pilote' => $this->ref_pilote,
+            ':ref_avion' => $this->ref_avion,
+            ':id_vol' => $this->id_vol
         ));
 
 

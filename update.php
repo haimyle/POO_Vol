@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();
-$bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
-    'root', '');
+require_once "src/bdd/Bdd.php";
+
+$bdd = new Bdd();
 ?>
 <head>
     <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"></link>
@@ -58,7 +58,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                 <select class="form-control" name="id_vol" id="id_vol">
                                     <option></option>
                                     <?php
-                                    $req = $bdd->query('SELECT * FROM vol');
+                                    $req = $bdd->getBdd()->query('SELECT * FROM vol');
                                     while($res=$req->fetch()){
                                         ?>
                                         <option value="<?php echo $res['id_vol'];?>"><?php echo $res['id_vol'];?></option>
@@ -81,7 +81,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                     </tr>
                                     <tbody>
                                     <?php
-                                    $req = $bdd->query('SELECT * FROM vol');
+                                    $req = $bdd->getBdd()->query('SELECT * FROM vol');
                                     while($res=$req->fetch()){
                                         ?>
                                         <tr>
@@ -106,7 +106,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                     <select class="form-control" name="ref_pilote" id="ref_pilote">
                                         <option></option>
                                         <?php
-                                        $req = $bdd->query('SELECT * FROM pilote');
+                                        $req = $bdd->getBdd()->query('SELECT * FROM pilote');
                                         while($res=$req->fetch()){
                                             ?>
                                             <option value="<?php echo $res['id_pilote'];?>"><?php echo $res['id_pilote'].". ".$res['nom']." ".$res['prenom']?> </option>
@@ -125,7 +125,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=hme_php_vol;charset=utf8',
                                     <select class="form-control" name="ref_avion" id="ref_avion">
                                         <option></option>
                                         <?php
-                                        $req = $bdd->query('SELECT * FROM avion');
+                                        $req = $bdd->getBdd()->query('SELECT * FROM avion');
                                         while($res=$req->fetch()){
                                             ?>
                                             <option value="<?php echo $res['id_avion'];?>"><?php echo $res['id_avion'].". ".$res['nom']?> </option>
