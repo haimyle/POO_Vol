@@ -1,5 +1,7 @@
 <?php
-require_once "../bdd/bdd.php";
+require_once "../Vol.php";
+require_once "../bdd/Bdd.php";
 
-$vol = new Vol();
-$vol->deleteVol($_POST['id_vol']);
+$bdd = new Bdd();
+$vol = new Vol(array('IdVol' => $_POST['id_vol']));
+$vol->deleteVol($bdd->getBdd());

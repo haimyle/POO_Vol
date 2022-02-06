@@ -1,7 +1,17 @@
 <?php
-require_once "../bdd/bdd.php";
+require_once "../Vol.php";
+require_once "../bdd/Bdd.php";
 
-$vol = new Vol();
-$vol->updateVol($_POST['date_depart'],$_POST['heure_depart'],$_POST['heure_arrivee'],$_POST['ref_pilote'],$_POST['ref_avion'],$_POST['id_vol']);
+$bdd = new Bdd();
+$vol = new Vol(array(
+    'DateDepart' => $_POST['date_depart'],
+    'HeureDepart' => $_POST['heure_depart'],
+    'HeureArrivee' => $_POST['heure_arrivee'],
+    'RefPilote' => $_POST['ref_pilote'],
+    'RefAvion' => $_POST['ref_avion'],
+    'IdVol' => $_POST['id_vol']
+));
+$vol->updateVol($bdd->getBdd());
+
 
 
