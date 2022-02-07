@@ -2,4 +2,11 @@
 require_once "../bdd/Bdd.php";
 require_once "../modele/User.php";
 
-$user = new User($_POST['email'],$_POST['password']);
+$bdd = new Bdd();
+
+$user = new User(array(
+    'Email' =>$_POST['email'],
+    'Password'=>$_POST['password']
+));
+$user->connexionUser($bdd->getBdd());
+

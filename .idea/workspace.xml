@@ -1,23 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
-      <change afterPath="$PROJECT_DIR$/src/modele/Vol.php" afterDir="false" />
+    <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="rajout Vol.php">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/POO_Vol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/POO_Vol.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/vol_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentations/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/vol_insert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/vol_update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="24k2EjrQjPfvsw67boWc9shGUKR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,7 +68,9 @@
       <workItem from="1644172235868" duration="299000" />
       <workItem from="1644172539251" duration="12591000" />
       <workItem from="1644238947977" duration="20000" />
-      <workItem from="1644238969684" duration="1849000" />
+      <workItem from="1644238969684" duration="3467000" />
+      <workItem from="1644242487010" duration="2766000" />
+      <workItem from="1644248799664" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
       <created>1644185795315</created>
@@ -59,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644185795315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rajout Vol.php">
+      <created>1644240907992</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644240907992</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +109,7 @@
       <path value="$PROJECT_DIR$/POO_Vol" />
     </ignored-roots>
     <MESSAGE value="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method" />
+    <MESSAGE value="rajout Vol.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="rajout Vol.php" />
   </component>
 </project>
