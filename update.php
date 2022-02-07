@@ -52,7 +52,6 @@ $bdd = new Bdd();
                     <br></br>
                     <h1 align="center" style="text-emphasis-color: #204d74" >UPDATE VOLS</h1>
                     <div class="booking-form">
-                        <form>
                             <div class="col-md-2">
                                 <div class="form-group">
                                 <select class="form-control" name="id_vol" id="id_vol">

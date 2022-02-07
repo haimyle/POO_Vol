@@ -1,5 +1,5 @@
 <?php
-require_once "../Vol.php";
+require_once "../modele/Vol.php";
 require_once "../bdd/Bdd.php";
 
 $bdd = new Bdd();
