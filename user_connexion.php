@@ -43,20 +43,19 @@
                     <div class="booking-form">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input class="form-control" type="email" name="email" id="email" required>
-                            <span class="form-label">EMAIL</span>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div align="center" class="col-md-4">
                         <div class="form-group">
+                            <input class="form-control" type="email" name="email" id="email" required>
+                            <span class="form-label">EMAIL</span>
                             <input class="form-control" type="password" name="password" id="password" required>
                             <span class="form-label">PASSWORD</span>
+                            <button class="submit-btn">LOGIN</button>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-btn">
-                            <button class="submit-btn">LOGIN</button>
-
                         </div>
                     </div>
 

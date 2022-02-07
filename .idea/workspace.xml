@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
-      <change afterPath="$PROJECT_DIR$/src/modele/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vol.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modele/Vol.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_connexion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/traitement/traitement_delete.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -53,6 +49,8 @@
       <workItem from="1644160573629" duration="1931000" />
       <workItem from="1644172235868" duration="299000" />
       <workItem from="1644172539251" duration="12591000" />
+      <workItem from="1644238947977" duration="20000" />
+      <workItem from="1644238969684" duration="1849000" />
     </task>
     <task id="LOCAL-00001" summary="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
       <created>1644185795315</created>
@@ -77,6 +75,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
