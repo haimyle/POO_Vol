@@ -7,7 +7,7 @@ class User
     private $nom;
     private $prenom;
     private $id;
-    private $dateNaissance;
+    private $role;
 
     public function __construct(array $donnees){
         $this-> hydrate($donnees);
@@ -72,25 +72,24 @@ class User
         $this->password = $password;
     }
 
-    public function getDateNaissance()
+    public function getRole()
     {
-        return $this->dateNaissance;
+        return $this->role;
     }
 
-    public function setDateNaissance($dateNaissance)
+    public function setRole($role)
     {
-        $this->dateNaissance = $dateNaissance;
+        $this->role = $role;
     }
 
     public function inscriptionUser($bdd){
-        $req = $bdd->prepare("INSERT INTO user(nom, prenom, email, password, dateNaissance) 
-        VALUES (:nom, :prenom, :email, :password, :dateNaissance");
+        $req = $bdd->prepare("INSERT INTO user(nom, prenom, email, password) 
+        VALUES (:nom, :prenom, :email, :password");
         $res = $req->execute(array(
             'nom' => $this->nom,
             'prenom' => $this->prenom,
             'email' => $this->email,
-            'password' => $this->password,
-            'dateNaissance' => $this->dateNaissance
+            'password' => $this->password
         ));
         if ($res){
             echo '<script>alert("Votre compte est enregistré")</script>';
