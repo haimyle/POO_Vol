@@ -2,134 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="add user connection form and traitement">
-      <change afterPath="$PROJECT_DIR$/src/traitement/traitement_user_inscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vue/form_user_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/POO_Vol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/POO_Vol.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/traitement/traitement_user_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/form_user_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/bootstrap/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/bootstrap/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/Read Me.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/demo-files/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/demo-files/demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/fonts/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/fonts/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/fonts/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/fonts/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/selection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/fonts/icomoon/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/images/bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/js/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_spinners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_toasts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_deprecate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_overflow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_stretched-link.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/bootstrap/vendor/_rfs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-form-06/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vol_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_vol_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vol_insert.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vol_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_vol_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website-menu-07/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_user_inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/form_user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/form_user_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_inscription.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +81,10 @@
       <workItem from="1644242487010" duration="2766000" />
       <workItem from="1644248799664" duration="2355000" />
       <workItem from="1644264843492" duration="26134000" />
+      <workItem from="1644343990493" duration="9108000" />
+      <workItem from="1644618498506" duration="6371000" />
+      <workItem from="1644783411066" duration="573000" />
+      <workItem from="1644784404126" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
       <created>1644185795315</created>
@@ -253,5 +141,16 @@
     <MESSAGE value="add index page" />
     <MESSAGE value="change index nav bar page" />
     <option name="LAST_COMMIT_MESSAGE" value="change index nav bar page" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/traitement/traitement_user_inscription.php</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

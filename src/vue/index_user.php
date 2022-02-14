@@ -1,5 +1,8 @@
+<?php
+session_start();
+?>
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,15 +10,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/home/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../../assets/home/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="./assets/home/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/home/css/owl.carousel.min.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./assets/home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/home/css/bootstrap.min.css">
 
     <!-- Style -->
-    <link rel="stylesheet" href="./assets/home/css/style.css">
+    <link rel="stylesheet" href="../../assets/home/css/style.css">
 
     <title>Website Menu #7</title>
 </head>
@@ -65,7 +68,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-2">
-                    <h1 class="my-0 site-logo"><a href="index.php">LPRS AIR</a></h1>
+                    <h1 class="my-0 site-logo"><a href="../../index.php">LPRS AIR</a></h1>
                 </div>
                 <div class="col-10">
                     <nav class="site-navigation text-right" role="navigation">
@@ -75,28 +78,24 @@
                                             class="icon-menu h3"></span></a></div>
 
                             <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+
+                                <li class="has-children">
+                                    <a href="#" class="nav-link">Bienvenue <?php echo $_SESSION['prenom'];?></a>
+                                    <ul class="dropdown arrow-top">
+                                        <!--<li class="has-children">
+                                            <a href="#">Gestion de Compte</a>
+                                            <ul class="dropdown">
+                                                <li><a href="#"></a></li>
+                                            </ul>
+                                        </li>-->
+                                        <li><a href="../vue/form_user_update.php" class="nav-link">Modifier</a></li>
+                                        <li><a href="#" class="nav-link">Se deconnecter</a></li>
+                                    </ul>
+                                </li>
                                 <li class="active"><a href="#home-section" class="nav-link">Réserver</a></li>
-                                <!--<li class="has-children">
-                                  <a href="#" class="nav-link">Pages</a>
-                                  <ul class="dropdown arrow-top">
-                                    <li><a href="#" class="nav-link">Team</a></li>
-                                    <li><a href="#" class="nav-link">Pricing</a></li>
-                                    <li><a href="#" class="nav-link">FAQ</a></li>
-                                    <li class="has-children">
-                                      <a href="#">More Links</a>
-                                      <ul class="dropdown">
-                                        <li><a href="#">Menu One</a></li>
-                                        <li><a href="#">Menu Two</a></li>
-                                        <li><a href="#">Menu Three</a></li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                </li>-->
                                 <li><a href="#about-section" class="nav-link">Enregistrement</a></li>
                                 <li><a href="#about-section" class="nav-link">Mes voyages</a></li>
                                 <li><a href="#about-section" class="nav-link">Actualités des vols </a></li>
-                                <li><a href="./src/vue/form_user_inscription.php" class="nav-link">S'inscrire</a></li>
-                                <li><a href="./src/vue/form_user_connexion.php" class="nav-link">Se connecter</a></li>
                                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
                             </ul>
                         </div>
@@ -108,14 +107,13 @@
 </div>
 
 
-<div class="hero" style="background-image: url('./assets/home/images/hero_1.png');"></div>
+<div class="hero" style="background-image: url('../../assets/home/images/hero_1.png');"></div>
 
 
-<script src="./assets/home/js/jquery-3.3.1.min.js"></script>
-<script src="./assets/home/js/popper.min.js"></script>
-<script src="./assets/home/js/bootstrap.min.js"></script>
-<script src="./assets/home/js/jquery.sticky.js"></script>
-<script src="./assets/home/js/main.js"></script>
-
+<script src="../../assets/home/js/jquery-3.3.1.min.js"></script>
+<script src="../../assets/home/js/popper.min.js"></script>
+<script src="../../assets/home/js/bootstrap.min.js"></script>
+<script src="../../assets/home/js/jquery.sticky.js"></script>
+<script src="../../assets/home/js/main.js"></script>
 </body>
 </html>

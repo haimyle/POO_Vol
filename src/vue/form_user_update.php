@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -17,21 +20,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h1 class="heading-section">INSCRIPTION</h1>
+                <h1 class="heading-section">MODIFICATION</h1>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
-                    <form action="../traitement/traitement_user_inscription.php" method="post" class="signin-form">
+                    <form action="../traitement/traitement_user_update.php" method="post" class="signin-form">
                         <div class="form-group">
-                            <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+                            <input type="text" readonly="readonly" name="id_user" class="form-control" value=<?php echo $_SESSION['id_user'];?> >
                         </div>
                         <div class="form-group">
-                            <input type="text" name="prenom" class="form-control" placeholder="Prenom" required>
+                            <input type="text" name="nom" class="form-control" placeholder="Nom" value=<?php echo $_SESSION['nom'];?>  required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            <input type="text" name="prenom" class="form-control" placeholder="Prenom" value=<?php echo $_SESSION['prenom'];?> required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" value=<?php echo $_SESSION['email'];?> required>
                         </div>
                         <div class="form-group">
                             <input id="password-field" type="password" name="password" class="form-control"
@@ -56,3 +62,4 @@
 </body>
 </html>
 
+<?php

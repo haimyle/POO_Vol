@@ -11,6 +11,7 @@ $vol = new Vol(array(
     'RefAvion' => $_POST['ref_avion']
 ));
 $vol->insertVol($bdd->getBdd());
+var_dump($vol);
 
 
 
