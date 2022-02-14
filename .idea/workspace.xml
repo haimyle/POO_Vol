@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="change index nav bar page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="add user connection form and traitement">
+      <change beforePath="$PROJECT_DIR$/src/vue/form_user_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_update.php" afterDir="false" />
+>>>>>>> 8d70b60308bc9e14d5fc0b4a25ce63db7560a3f4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +44,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/vue" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PHPpractice\POO_Vol\" />
+      <recent name="C:\wamp64\www\PHPpractice\POO_Vol\src\vue" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,9 +73,18 @@
       <workItem from="1644238947977" duration="20000" />
       <workItem from="1644238969684" duration="3467000" />
       <workItem from="1644242487010" duration="2766000" />
+<<<<<<< HEAD
       <workItem from="1644248799664" duration="2442000" />
       <workItem from="1644328370401" duration="625000" />
       <workItem from="1644504238455" duration="890000" />
+=======
+      <workItem from="1644248799664" duration="2355000" />
+      <workItem from="1644264843492" duration="26134000" />
+      <workItem from="1644343990493" duration="9108000" />
+      <workItem from="1644618498506" duration="6371000" />
+      <workItem from="1644783411066" duration="573000" />
+      <workItem from="1644784404126" duration="23000" />
+>>>>>>> 8d70b60308bc9e14d5fc0b4a25ce63db7560a3f4
     </task>
     <task id="LOCAL-00001" summary="modify method delete, update, insert, using $bdd parametre&#10;add hydrate method">
       <created>1644185795315</created>
@@ -121,5 +141,16 @@
     <MESSAGE value="add index page" />
     <MESSAGE value="change index nav bar page" />
     <option name="LAST_COMMIT_MESSAGE" value="change index nav bar page" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/traitement/traitement_user_inscription.php</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

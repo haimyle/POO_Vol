@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 class User
 {
     private $email;
@@ -7,16 +8,18 @@ class User
     private $nom;
     private $prenom;
     private $id;
-    private $dateNaissance;
+    private $role;
 
-    public function __construct(array $donnees){
-        $this-> hydrate($donnees);
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees);
     }
 
-    public function hydrate(array $donnees){
-        foreach ($donnees as $key => $value){
-            $method = 'set'.ucfirst($key);
-            if(method_exists($this,$method)){
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value) {
+            $method = 'set' . ucfirst($key);
+            if (method_exists($this, $method)) {
                 $this->$method($value);
             }
         }
@@ -72,76 +75,99 @@ class User
         $this->password = $password;
     }
 
-    public function getDateNaissance()
+    public function getRole()
     {
-        return $this->dateNaissance;
+        return $this->role;
     }
 
-    public function setDateNaissance($dateNaissance)
+    public function setRole($role)
     {
-        $this->dateNaissance = $dateNaissance;
+        $this->role = $role;
     }
 
-    public function inscriptionUser($bdd){
-        $req = $bdd->prepare("INSERT INTO user(nom, prenom, email, password, dateNaissance) 
-        VALUES (:nom, :prenom, :email, :password, :dateNaissance");
+    public function inscriptionUser($bdd)
+    {
+        $req = $bdd->prepare('SELECT * FROM user WHERE email = :email');
+        $req->execute(array(
+            'email' => $_POST['email']
+        ));
+        $res = $req->fetch();
+        if ($res) {
+            echo '<script>alert("Compte existant")</script>';
+        } else {
+            $req = $bdd->prepare("INSERT INTO user(nom, prenom, email, password) 
+        VALUES (:nom, :prenom, :email, :password)");
+            $res = $req->execute(array(
+                'nom' => $this->nom,
+                'prenom' => $this->prenom,
+                'email' => $this->email,
+                'password' => $this->password
+            ));
+            if ($res) {
+                echo '<script>alert("Votre compte est enregistré")</script>';
+            } else {
+                echo '<script>alert("Erreur")</script>';
+            }
+
+        }
+    }
+
+    public function updateUser($bdd)
+    {
+        $req = $bdd->prepare("UPDATE user SET nom =:nom, prenom =:prenom,email =:email, password =:password WHERE id_user=:id_user");
         $res = $req->execute(array(
             'nom' => $this->nom,
             'prenom' => $this->prenom,
             'email' => $this->email,
             'password' => $this->password,
-            'dateNaissance' => $this->dateNaissance
-        ));
-        if ($res){
-            echo '<script>alert("Votre compte est enregistré")</script>';
-        }
-        else{
-            echo '<script>alert("Erreur")</script>';
-        }
-
-    }
-    public function updateUser($bdd){
-        $req = $bdd->prepare("UPDATE user SET email =:email, password =:password WHERE id_user=:id_user");
-        $res = $req->execute(array(
-            'email' => $this->email,
-            'password' => $this->password,
             'id_user' => $this->id
         ));
-        if ($res){
+        var_dump($res);
+        if ($res) {
             echo '<script>alert("Votre compte est à jour")</script>';
-        }
-        else{
+            header('Location: ../vue/index_user.php');
+        } else {
             echo '<script>alert("Erreur")</script>';
         }
     }
 
-    public function connexionUser($bdd){
-        $req = $bdd->prepare("SELECT * FROM user WHERE email=:email, password=:password");
+    public function connexionUser($bdd)
+    {
+        $req = $bdd->prepare("SELECT * FROM user WHERE email=:email AND password=:password");
         $req->execute(array(
-            'email'=>$this->email,
-            'password'=>$this->password
+            'email' => $this->email,
+            'password' => $this->password
         ));
-        $res=$req->fetch();
-        if($res){
+        $res = $req->fetch();
+        var_dump($res);
+        if ($res) {
             $_SESSION['email'] = $res['email'];
             $_SESSION['password'] = $res['password'];
-            header('Location: espace_membre.php');
-        }
-        else{
+            $_SESSION['prenom'] = $res['prenom'];
+            $_SESSION['nom'] = $res['nom'];
+            $_SESSION['id_user'] = $res['id_user'];
+            echo '<script>alert("Bon login")</script>';
+            if ($res['role'] == "admin") {
+                header('Location: ../vue/index_admin.php');
+            } else {
+                header('Location: ../vue/index_user.php');
+            }
+
+        } else {
             echo '<script>alert("Mauvais login")</script>';
-            header('Location: form.html');
+            header('Location:../vue/form_user_connexion.php');
         }
     }
 
-    public function deleteUser($bdd){
+    public function deleteUser($bdd)
+    {
         $req = $bdd->prepare("DELETE FROM user WHERE id_user=:id_user");
         $res = $req->execute(array(
             'id_user' => $this->id
         ));
-        if ($res){
-            echo '<script>alert("VOtre compte est supprimé")</script>';
-        }
-        else{
+        if ($res) {
+            echo '<script>alert("Votre compte est supprimé")</script>';
+        } else {
             echo '<script>alert("Erreur")</script>';
         }
     }
