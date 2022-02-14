@@ -93,7 +93,8 @@ class User
         ));
         $res = $req->fetch();
         if ($res) {
-            echo '<script>alert("Compte existant")</script>';
+            echo "<script>alert('Compte existant');
+                window.location.href='../vue/form_user_inscription.php';</script>";
         } else {
             $req = $bdd->prepare("INSERT INTO user(nom, prenom, email, password) 
         VALUES (:nom, :prenom, :email, :password)");
@@ -104,9 +105,11 @@ class User
                 'password' => $this->password
             ));
             if ($res) {
-                echo '<script>alert("Votre compte est enregistré")</script>';
+                echo "<script>alert('Votre compte est enregistré');
+                window.location.href='../vue/form_user_connexion.php';</script>";
             } else {
-                echo '<script>alert("Erreur")</script>';
+                echo "<script>alert('Erreur');
+                window.location.href='../vue/form_user_inscription.php';</script>";
             }
 
         }
