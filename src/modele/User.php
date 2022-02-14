@@ -127,10 +127,11 @@ class User
         ));
         var_dump($res);
         if ($res) {
-            echo '<script>alert("Votre compte est à jour")</script>';
-            header('Location: ../vue/index_user.php');
+            echo "<script>alert('Votre compte est à jour!');
+                window.location.href='../vue/index_user.php';</script>";
         } else {
-            echo '<script>alert("Erreur")</script>';
+            echo "<script>alert('Erreur');
+                window.location.href='../vue/form_user_update.php';</script>";
         }
     }
 
@@ -149,7 +150,6 @@ class User
             $_SESSION['prenom'] = $res['prenom'];
             $_SESSION['nom'] = $res['nom'];
             $_SESSION['id_user'] = $res['id_user'];
-            echo '<script>alert("Bon login")</script>';
             if ($res['role'] == "admin") {
                 header('Location: ../vue/index_admin.php');
             } else {
@@ -157,8 +157,8 @@ class User
             }
 
         } else {
-            echo '<script>alert("Mauvais login")</script>';
-            header('Location:../vue/form_user_connexion.php');
+            echo "<script>alert('Mauvais email ou mot de passe. Ressayez!');
+                window.location.href='../vue/form_user_connexion.php';</script>";
         }
     }
 
