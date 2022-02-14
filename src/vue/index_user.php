@@ -88,8 +88,9 @@ session_start();
                                                 <li><a href="#"></a></li>
                                             </ul>
                                         </li>-->
+                                        <li><a href="../vue/form_user_delete.php" class="nav-link">Supprimer</a></li>
                                         <li><a href="../vue/form_user_update.php" class="nav-link">Modifier</a></li>
-                                        <li><a href="#" class="nav-link">Se deconnecter</a></li>
+                                        <li><a href="../traitement/traitement_user_deconnexion.php" class="nav-link">Se deconnecter</a></li>
                                     </ul>
                                 </li>
                                 <li class="active"><a href="#home-section" class="nav-link">Réserver</a></li>

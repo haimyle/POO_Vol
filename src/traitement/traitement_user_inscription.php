@@ -30,15 +30,15 @@ try {
     //Server settings
     $mail->SMTPDebug = 1;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host = 'smtp.sendgrid.com';                     //Set the SMTP server to send through
+    $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth = true;                                   //Enable SMTP authentication
-    $mail->Username = 'LPRS';                     //SMTP username
-    $mail->Password = 'secret';                               //SMTP password
+    $mail->Username = 'tester.lprs@gmail.com';                     //SMTP username
+    $mail->Password = 'Lprs1412';                               //SMTP password
     $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('info@lprs.fr', 'LPRS Airline');
+    $mail->setFrom('tester.lprs@gmail.com', 'LPRS Airline');
     $mail->addAddress($_POST['email'], $_POST['prenom']);     //Add a recipient
                 //Name is optional
     $body = "Bienvenue chez LPRS Airline !\n A partir de maintenant, vous faites partie de notre grande famille";
