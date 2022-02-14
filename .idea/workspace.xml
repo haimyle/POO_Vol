@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20c31bc5-0a0c-4a4e-8ab9-59955011d6f5" name="Changes" comment="add user connection form and traitement">
-      <change afterPath="$PROJECT_DIR$/src/traitement/traitement_user_update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vue/form_user_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/modele/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_user_connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_user_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_user_inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/traitement/traitement_vol_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/traitement/traitement_vol_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/form_user_connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/form_user_inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/form_user_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/form_user_update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

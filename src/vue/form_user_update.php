@@ -15,7 +15,7 @@ session_start();
     <link rel="stylesheet" href="../../assets/user/css/style.css">
 
 </head>
-<body class="img js-fullheight" style="background-image: url(../../assets/user/images/sapa.jpg);">
+<body class="img js-fullheight" style="background-image: url(../../assets/user/images/huong.jpg);">
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
