@@ -165,13 +165,17 @@ class User
     public function deleteUser($bdd)
     {
         $req = $bdd->prepare("DELETE FROM user WHERE id_user=:id_user");
-        $res = $req->execute(array(
+        $is_success = $req->execute(array(
             'id_user' => $this->id
         ));
-        if ($res) {
-            echo '<script>alert("Votre compte est supprimé")</script>';
+        //var_dump($is_success);
+        if ($is_success) {
+            session_destroy();
+            echo "<script>alert('Votre compte est supprimé!');
+                window.location.href='../../index.php;</script>";
         } else {
-            echo '<script>alert("Erreur")</script>';
+            echo "<script>alert('Erreur');
+                window.location.href='../vue/form_user_update.php';</script>";
         }
     }
 }
