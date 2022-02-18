@@ -92,8 +92,8 @@ session_start();
                                                 <li><a href="#"></a></li>
                                             </ul>
                                         </li>-->
-                                        <li><a href="../vue/form_user_update.php" class="nav-link">Supprimer</a></li>
                                         <li><a href="../vue/form_user_update.php" class="nav-link">Modifier</a></li>
+                                        <li><a href="../vue/form_user_delete.php" class="nav-link">Supprimer</a></li>
                                         <li><a href="../traitement/traitement_user_deconnexion.php" class="nav-link">Se deconnecter</a></li>
                                     </ul>
                                 </li>
@@ -144,7 +144,7 @@ session_start();
                             <button type="submit" class="form-control btn btn-light submit px-3">Enregistrer</button>
                         </div>
                         <div class="w-100 text-center" >
-                            <a href="../traitement/traitement_user_delete.php" onclick="return confirm("Êtes-vous sûr de vouloir supprimer votre compte?")" style="color: #fff"><u>Supprimez votre compte</u></a>
+                            <a onClick="return confirm('Etes vous sur de vouloir supprimer votre compte?')" href="../traitement/traitement_user_delete.php" style="color: #fff"><u>Supprimez votre compte</u></a>
                         </div>
                 </div>
                 </form>

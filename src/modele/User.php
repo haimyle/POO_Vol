@@ -172,7 +172,7 @@ class User
         if ($is_success) {
             session_destroy();
             echo "<script>alert('Votre compte est supprimé!');
-                window.location.href='../../index.php;</script>";
+                window.location.href='../vue/index_delete.php';</script>";
         } else {
             echo "<script>alert('Erreur');
                 window.location.href='../vue/form_user_update.php';</script>";
