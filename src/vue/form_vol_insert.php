@@ -58,8 +58,12 @@ $bdd = new Bdd();
             <div class="container">
                 <div class="row">
                     <br></br>
-                    <h1 align="center" style="text-emphasis-color: #204d74" >AJOUT VOLS</h1>
+                    <h1 align="center" style="text-emphasis-color: #204d74" >AJOUT</h1>
                     <div class="booking-form">
+                        <div class="w-100 text-center">
+                            <a href="index_admin.php" style="text-emphasis-color: black">Accueil</a>
+                        </div>
+                        <br>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <input class="form-control" type="date" name="date_depart" id="date" value="Date de depart">

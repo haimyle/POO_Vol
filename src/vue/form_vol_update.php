@@ -50,8 +50,11 @@ $bdd = new Bdd();
             <div class="container">
                 <div class="row">
                     <br></br>
-                    <h1 align="center" style="text-emphasis-color: #204d74" >UPDATE VOLS</h1>
+                    <h1 align="center" style="text-emphasis-color: #204d74" >MODIFICATION</h1>
                     <div class="booking-form">
+                        <div class="w-100 text-center">
+                            <a href="index_admin.php" style="text-emphasis-color: black">Accueil</a>
+                        </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <select class="form-control" name="id_vol" id="id_vol">
@@ -142,12 +145,15 @@ $bdd = new Bdd();
                             <div class="form-btn">
                                 <button class="submit-btn">Update</button>
                             </div>
+                            <div class="w-100 text-center">
+                                <a href="index_admin.php" style="text-emphasis-color: black">Accueil</a>
+                                <br>
+                            </div>
 </form>
 </div>
 </div>
 </div>
 </div>
 </div>
-</form>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

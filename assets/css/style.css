@@ -5,7 +5,7 @@
 
 .section .section-center {
 	position: absolute;
-	top: 50%;
+	top: 100%;
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-50%);
@@ -14,14 +14,14 @@
 
 #booking {
 	font-family: 'Montserrat', sans-serif;
-	background-image: url('../img/background.jpg');
+	background-image: url('../img/hero_1.png');
 	background-size: cover;
 	background-position: center;
 	font-weight: 300;
 }
 
 .booking-form {
-	background: #fff;
+	
 	padding: 30px 15px 0px;
 	border-radius: 4px;
 	overflow: auto;

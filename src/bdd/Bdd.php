@@ -13,9 +13,6 @@ class Bdd
         catch (Exception $e){die('Erreur : ' . $e->getMessage());}
     }
 
-    /**
-     * @return PDO
-     */
     public function getBdd()
     {
         return $this->bdd;

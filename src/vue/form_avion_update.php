@@ -1,10 +1,12 @@
-<?php
-session_start();
-?>
 <!doctype html>
-<html lang="en">
+<?php
+require_once "../bdd/Bdd.php";
+
+$bdd = new Bdd();
+?>
+<html lang="fr">
 <head>
-    <!-- Required meta tags -->
+    <title>Login 10</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,21 +22,23 @@ session_start();
     <!-- Style -->
     <link rel="stylesheet" href="../../assets/home/css/style.css">
 
-    <title>Website Menu #7</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../assets/user/css/style.css">
+    <style>
+        select:focus {
+            min-width: 150px;
+            width: auto;
+        }
+    </style>
+    </style>
+
 </head>
-<body>
-
-
-<div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-</div> <!-- .site-mobile-menu -->
-
-
+<body class="img js-fullheight" style="background-image: url(../../assets/user/images/hoian.jpg);">
+<
 <div class="site-navbar-wrap">
     <div class="site-navbar-top">
         <div class="container py-3">
@@ -73,7 +77,9 @@ session_start();
                 <div class="col-10">
                     <nav class="site-navigation text-right" role="navigation">
                         <div class="container">
-                            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+                            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                                                                                          class="site-menu-toggle js-menu-toggle text-white"><span
+                                        class="icon-menu h3"></span></a></div>
 
                             <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
                                 <li class="active"><a href="#home-section" class="nav-link">Accueil</a></li>
@@ -104,7 +110,8 @@ session_start();
                                                 <li><a href="form_avion_delete.php">Suppression</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="../traitement/traitement_user_deconnexion.php" class="nav-link">Se deconnecter</a></li>
+                                        <li><a href="../traitement/traitement_user_deconnexion.php" class="nav-link">Se
+                                                deconnecter</a></li>
                                     </ul>
                                 </li>
                                 <!--<li><a href="#about-section" class="nav-link">Qui sommes nous</a></li>-->
@@ -119,14 +126,56 @@ session_start();
         </div>
     </div>
 </div>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center mb-5">
+                <h1 class="heading-section">MODIFICATION</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <form action="../traitement/traitement_pilote_update.php" method="post" class="signin-form">
+                        <div class="form-group">
+                            <select class="form-control" name="id_avion" id="id_avion">
+                                <option></option>
+                                <?php
+                                $req = $bdd->getBdd()->query('SELECT * FROM avion');
+                                while($res=$req->fetch()){
+                                    ?>
+                                    <option value="<?php echo $res['id_avion'];?>">
+                                        <?php echo $res['id_avion'].".  ".$res['nom'].'( Capacité: '.$res['capacite'].
+                                            '- Fournisseur: '.$res['fournisseur'] .' )';?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="nom" class="form-control" placeholder="Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="capacite" class="form-control" placeholder="Capacite" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fournisseur" class="form-control" placeholder="Fournisseur" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-light submit px-3">Modifier</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
+<script src="../../assets/user/js/jquery.min.js"></script>
+<script src="../../assets/user/js/popper.js"></script>
+<script src="../../assets/user/js/bootstrap.min.js"></script>
+<script src="../../assets/user/js/main.js"></script>
 
-<div class="hero" style="background-image: url('../../assets/home/images/hero_1.png');"></div><x></x>
-
-<script src="../../assets/home/js/jquery-3.3.1.min.js"></script>
-<script src="../../assets/home/js/popper.min.js"></script>
-<script src="../../assets/home/js/bootstrap.min.js"></script>
-<script src="../../assets/home/js/jquery.sticky.js"></script>
-<script src="../../assets/home/js/main.js"></script>
 </body>
 </html>
+
+<?php

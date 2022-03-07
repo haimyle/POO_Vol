@@ -3,6 +3,7 @@
 
 class Vol
 {
+    private $idVol;
     private $date_depart;
     private $heure_arrivee;
     private $heure_depart;
@@ -94,10 +95,12 @@ class Vol
             'ref_avion' => $this->ref_avion
         ));
         if ($res){
-            echo '<script>alert("Le vol est enregistré")</script>';
+            echo "<script>alert('Le vol est enregistré');
+            window.location.href='../vue/form_vol_insert.php';</script>";
         }
         else{
-            echo '<script>alert("Erreur")</script>';
+            echo "<script>alert('Erreur');
+            window.location.href='../vue/form_vol_insert.php';</script>";
         }
     }
 
@@ -112,10 +115,12 @@ class Vol
             'id_vol' => $this->id_vol
         ));
         if ($res){
-            echo '<script>alert("Le vol est mis à jour")</script>';
+            echo "<script>alert('Le vol est mis à jour');
+            window.location.href='../vue/form_vol_update.php';</script>";
         }
         else{
-            echo '<script>alert("Erreur")</script>';
+            echo "<script>alert('Erreur');
+            window.location.href='../vue/form_vol_update.php';</script>";
         }
     }
 
@@ -125,10 +130,13 @@ class Vol
             'id_vol' => $this->id_vol
         ));
         if ($res){
-            echo '<script>alert("Le vol est supprimé")</script>';
+            echo "<script>alert('Le vol est supprimé');
+            window.location.href='../vue/form_vol_delete.php';</script>";
+
         }
         else{
-            echo '<script>alert("Erreur")</script>';
+            echo "<script>alert('Erreur');
+            window.location.href='../vue/form_vol_delete.php';</script>";
         }
     }
 }
