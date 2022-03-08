@@ -94,15 +94,6 @@ class Pilote
         $this->ville = $ville;
     }
 
-    public function afficherVol($bdd)
-    {
-        $req = $bdd->prepare("SELECT pilote.*,vol.* FROM pilote INNER JOIN vol ON pilote.id_pilote=vol.ref_pilote WHERE pilote.id_pilote=:id_pilote");
-        $res = $req->execute(array(
-            'id' => $_POST['id_pilote']
-        ));
-        $res = $req->fetch();
-    }
-
     public function insertPilote($bdd){
         $req = $bdd->prepare("SELECT * FROM pilote WHERE nom=:nom, prenom =:prenom, rue=:rue");
         $res = $req->execute(array(
