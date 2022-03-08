@@ -100,7 +100,7 @@ class Avion
             'id_avion' => $this->id
         ));
         if ($res) {
-            echo "<script>alert('L'avion est supprimée!');
+            echo "<script>alert('Avion supprimée!');
                 window.location.href='../vue/form_avion_delete.php';</script>";
         } else {
             echo "<script>alert('Erreur');
