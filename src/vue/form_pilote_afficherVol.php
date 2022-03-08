@@ -7,6 +7,22 @@ $bdd = new Bdd();
 <html lang="fr">
 <head>
     <title>Login 10</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"></link>
+    <script type="text/javascript" src="http: //cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"></link>
+    <script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#myTable').DataTable()
+        });
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,16 +44,9 @@ $bdd = new Bdd();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../../assets/user/css/style.css">
-    <style>
-        select:focus {
-            min-width: 150px;
-            width: auto;
-        }
-    </style>
-    </style>
 
 </head>
-<body class="img js-fullheight" style="background-image: url(../../assets/user/images/hoian.jpg);">
+<body class="img js-fullheight" style="background-image: url(../../assets/user/images/cloud.jpg);">
 <
 <div class="site-navbar-wrap">
     <div class="site-navbar-top">
@@ -99,7 +108,8 @@ $bdd = new Bdd();
                                             <ul class="dropdown">
                                                 <li><a href="../vue/form_pilote_insert.php">Ajout</a></li>
                                                 <li><a href="../vue/form_pilote_update.php">Modification</a></li>
-                                                <li><a href="../vue/form_pilote_afficherVol.php">Affichage de Vols</a></li>
+                                                <li><a href="../vue/form_pilote_afficherVol.php">Affichage de Vols</a>
+                                                </li>
                                                 <li><a href="../vue/form_pilote_delete.php">Suppression</a></li>
                                             </ul>
                                         </li>
@@ -131,61 +141,69 @@ $bdd = new Bdd();
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 text-center mb-5">
-                <h1 class="heading-section">MODIFICATION</h1>
+                <h1 class="heading-section">PILOTES - VOLS</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="login-wrap p-0">
-                    <form action="../traitement/traitement_pilote_update.php" method="post" class="signin-form">
-                        <div class="form-group">
-                            <select class="form-control" name="id_pilote" id="id_pilote">
-                                <option></option>
+        <form action="../traitement/traitement_pilote_afficherVol.php" method="post" class="signin-form">
+            <div class="section-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select class="form-control btn btn-light submit px-3" name="id_pilote" id="id_pilote">
+                                    <option>CHOISIR UNE PILOTE</option>
+                                    <?php
+                                    $req = $bdd->getBdd()->query('SELECT * FROM pilote');
+                                    while ($res = $req->fetch()) {
+                                        ?>
+                                        <option value="<?php echo $res['id_pilote']; ?>"><?php echo $res['id_pilote'] . ". " .
+                                                $res['nom'] . " " . $res['prenom']; ?>
+                                        </option>
+                                    <?php } ?>
+                                </select>
+                                <span class="select-arrow"></span>
+                                <span class="form-label"><br>></span>
+                                <button type="submit" name="choisir" class="form-control btn btn-light submit px-3">CHOISIR</button>
+                                >
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-8" style="background-color:rgba(255,255,255)">
+                            <table style="color: black " id="myTable">
+                                <thead>
+                                <tr>
+                                    <th>ID Pilote</th>
+                                    <th>Nom</th>
+                                    <th>Adresse</th>
+                                </tr>
+                                <tbody>
                                 <?php
                                 $req = $bdd->getBdd()->query('SELECT * FROM pilote');
-                                while($res=$req->fetch()){
+                                while ($res = $req->fetch()) {
                                     ?>
-                                    <option value="<?php echo $res['id_pilote'];?>">
-                                        <?php echo $res['id_pilote'].".  ".$res['nom'].' '.$res['prenom'].' ('.$res['rue']
-                                            .', ' .$res['cp'].' '.$res['ville'].' - salaire: '.$res['salaire'].' )';?>
-                                    </option>
+                                    <tr>
+                                        <td><?php echo $res['id_pilote']; ?></td>
+                                        <td><?php echo $res['nom'] . ' ' . $res['prenom']; ?></td>
+                                        <td><?php echo $res['rue'] . ' ' . $res['cp'] . ' ' . $res['ville']; ?></td>
+                                    </tr>
                                 <?php } ?>
-                            </select>
+                                </tbody>
+                                </thead>
+                            </table>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="nom" class="form-control" placeholder="Nom" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="prenom" class="form-control" placeholder="Prenom" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="rue" class="form-control" placeholder="Rue" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="cp" class="form-control" placeholder="Code Postale" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="ville" class="form-control" placeholder="Ville" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="salaire" class="form-control" placeholder="Salaire" required>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control btn btn-light submit px-3">Modifier</button>
-                        </div>
+                    </div>
                 </div>
-                </form>
             </div>
-        </div>
     </div>
+    </form>
 </section>
 
-<script src="../../assets/user/js/jquery.min.js"></script>
+
+<!--script src="../../assets/user/js/jquery.min.js"></script>
 <script src="../../assets/user/js/popper.js"></script>
 <script src="../../assets/user/js/bootstrap.min.js"></script>
-<script src="../../assets/user/js/main.js"></script>
+<script src="../../assets/user/js/main.js"></script-->
 
 </body>
 </html>
 
-<?php

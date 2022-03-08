@@ -80,10 +80,11 @@
                                             </ul>
                                         </li>
                                         <li class="has-children">
-                                            <a href="#">Gestion de Pilots</a>
+                                            <a href="#">Gestion de Pilotes</a>
                                             <ul class="dropdown">
                                                 <li><a href="../vue/form_pilote_insert.php">Ajout</a></li>
                                                 <li><a href="../vue/form_pilote_update.php">Modification</a></li>
+                                                <li><a href="../vue/form_pilote_afficherVol.php">Affichage de Vols</a></li>
                                                 <li><a href="../vue/form_pilote_delete.php">Suppression</a></li>
                                             </ul>
                                         </li>

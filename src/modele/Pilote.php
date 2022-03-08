@@ -96,14 +96,11 @@ class Pilote
 
     public function afficherVol($bdd)
     {
-        $req = $bdd->prepare("SELECT pilote.*,vol.* FROM pilote INNER JOIN vol ON id_pilote=ref_pilote WHERE id_pilote=:id_pilote");
+        $req = $bdd->prepare("SELECT pilote.*,vol.* FROM pilote INNER JOIN vol ON pilote.id_pilote=vol.ref_pilote WHERE pilote.id_pilote=:id_pilote");
         $res = $req->execute(array(
             'id' => $_POST['id_pilote']
         ));
         $res = $req->fetch();
-        while($res){
-            
-        }
     }
 
     public function insertPilote($bdd){

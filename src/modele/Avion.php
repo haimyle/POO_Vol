@@ -1,6 +1,6 @@
 <?php
 
-class Pilote
+class Avion
 {   private $id;
     private $nom;
     private $capacite;
@@ -64,18 +64,18 @@ class Pilote
     public function insertAvion($bdd){
         $req = $bdd->prepare("INSERT INTO avion(nom, capacite, fournisseur) VALUES (:nom, :capacite, :fournisseur)");
         $res = $req->execute(array(
-                'nom' => $this->nom,
-                'capacite' => $this->capacite,
-                'fournisseur' => $this->fournisseur
-            ));
-            if ($res) {
-                echo "<script>alert('Avion enregistrée');
+            'nom' => $this->nom,
+            'capacite' => $this->capacite,
+            'fournisseur' => $this->fournisseur
+        ));
+        if ($res) {
+            echo "<script>alert('Avion enregistrée');
                 window.location.href='../vue/form_avion_insert.php';</script>";
-            } else {
-                echo "<script>alert('Erreur');
+        } else {
+            echo "<script>alert('Erreur');
                 window.location.href='../vue/form_avion_insert.php';</script>";
-            }
         }
+    }
 
     public function updateAvion($bdd){
         $req = $bdd->prepare("UPDATE avion SET nom=:nom, capacite=:capacite, fournisseur=:fournisseur WHERE id_avion=:id_avion");
