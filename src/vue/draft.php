@@ -181,8 +181,11 @@ $bdd = new Bdd();
                                 <tbody>
                                 <?php
                                 $req = $bdd->getBdd()->query("SELECT pilote.*,vol.* FROM pilote INNER JOIN vol ON pilote.id_pilote=vol.ref_pilote");
-                                $res = $req->fetchAll();
-                                while($res) {
+                                $req->execute();
+                                $toto = $req->fetchAll();
+                                //  var_dump($res);exit();
+                                //while ($res=$req->fetch()) {
+                                    foreach ($toto as $res){
                                     ?>
                                     <tr>
                                         <td><?php echo $res['id_pilote'].'. '. $res['nom'] . ' ' . $res['prenom']; ?></td>
