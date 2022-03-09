@@ -144,53 +144,43 @@ $bdd = new Bdd();
                 <h1 class="heading-section">PILOTES - VOLS</h1>
             </div>
         </div>
-        <form action="../traitement/traitement_pilote_afficherVol.php" method="post" class="signin-form">
             <div class="section-center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <select class="form-control btn btn-light submit px-3" name="id_pilote" id="id_pilote">
-                                    <option>CHOISIR UNE PILOTE</option>
-                                    <?php
-                                    $req = $bdd->getBdd()->query('SELECT * FROM pilote');
-                                    while ($res = $req->fetch()) {
-                                        ?>
-                                        <option value="<?php echo $res['id_pilote']; ?>"><?php echo $res['id_pilote'] . ". " .
-                                                $res['nom'] . " " . $res['prenom']; ?>
-                                        </option>
-                                    <?php } ?>
-                                </select>
-                                <span class="select-arrow"></span>
-                                <span class="form-label"><br>></span>
-                                <button type="submit" name="choisir" class="form-control btn btn-light submit px-3">CHOISIR</button>
-                                >
-                            </div>
-                        </div>
-                        <div class="col-md-1"></div>
+                        <div class="col-md-2"></div>
                         <div class="col-md-8" style="background-color:rgba(255,255,255)">
                             <table style="color: black " id="myTable">
                                 <thead>
                                 <tr>
-                                    <th>ID Pilote</th>
-                                    <th>Nom</th>
-                                    <th>Adresse</th>
+                                    <th>Pilote</th>
+                                    <th>ID Vol</th>
+                                    <th>Date Depart</th>
+                                    <th>Heure Depart</th>
+                                    <th>Heure Arrivée</th>
                                 </tr>
                                 <tbody>
                                 <?php
-                                $req = $bdd->getBdd()->query('SELECT * FROM pilote');
-                                while ($res = $req->fetch()) {
+                                $req = $bdd->getBdd()->query("SELECT pilote.*,vol.* FROM pilote INNER JOIN vol ON pilote.id_pilote=vol.ref_pilote");
+                                $req->execute();
+                                $toto = $req->fetchAll();
+                                //  var_dump($res);exit();
+                                //while ($res=$req->fetch()) {
+                                foreach ($toto as $res){
                                     ?>
                                     <tr>
-                                        <td><?php echo $res['id_pilote']; ?></td>
-                                        <td><?php echo $res['nom'] . ' ' . $res['prenom']; ?></td>
-                                        <td><?php echo $res['rue'] . ' ' . $res['cp'] . ' ' . $res['ville']; ?></td>
+                                        <td><?php echo $res['id_pilote'].'. '. $res['nom'] . ' ' . $res['prenom']; ?></td>
+                                        <td><?php echo $res['id_vol'];?></td>
+                                        <td><?php echo $res['date_depart'];?></td>
+                                        <td><?php echo $res['heure_depart'];?></td>
+                                        <td><?php echo $res['heure_arrivee'];?></td>
                                     </tr>
-                                <?php } ?>
+                                <?php }?>
+
                                 </tbody>
                                 </thead>
                             </table>
                         </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
