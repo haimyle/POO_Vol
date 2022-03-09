@@ -137,7 +137,7 @@ $bdd = new Bdd();
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
-                    <form action="../traitement/traitement_pilote_update.php" method="post" class="signin-form">
+                    <form action="../traitement/traitement_avion_update.php" method="post" class="signin-form">
                         <div class="form-group">
                             <select class="form-control" name="id_avion" id="id_avion">
                                 <option></option>
